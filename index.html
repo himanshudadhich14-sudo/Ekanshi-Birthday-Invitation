@@ -146,8 +146,29 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060010;font-family:
   opacity:0;transform:translateX(-50px);transition:opacity .9s .6s,transform .9s .6s;}
 .ph-text2.in{opacity:1;transform:translateX(0);}
 
-/* ════════════════════════════════
+  /* ════════════════════════════════
    SCENE 5 — Details
+════════════════════════════════ */
+#s6{background:radial-gradient(ellipse at center,#3a0058 0%,#08001a 80%);text-align:center;padding:20px;}
+.s6ring{font-size:clamp(1.3rem,5vw,2.2rem);letter-spacing:10px;
+  opacity:0;transform:scale(0);transition:opacity .6s .2s,transform .8s .2s cubic-bezier(.34,1.56,.64,1);}
+#s6.vis .s6ring{opacity:1;transform:scale(1);}
+.s6main{opacity:0;transform:translateY(28px);transition:opacity .8s .7s,transform .8s .7s;}
+#s6.vis .s6main{opacity:1;transform:translateY(0);}
+.s6name{
+  font-family:'Dancing Script',cursive;
+  font-size:clamp(4rem,16vw,8rem);line-height:1;
+  background:linear-gradient(135deg,#ffd700,#ff69b4,#ce93d8,#ffd700);
+  background-size:300%;animation:shim 3s linear infinite;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 0 40px rgba(255,215,0,.4));margin:8px 0;}
+.s6msg{font-style:italic;font-size:clamp(.88rem,3vw,1.15rem);color:var(--pl);line-height:1.85;max-width:360px;margin:0 auto 16px;}
+.s6hearts{font-size:clamp(1.2rem,4vw,1.8rem);letter-spacing:8px;
+  opacity:0;transform:translateY(18px);transition:opacity .8s 1.3s,transform .8s 1.3s;animation:fl 2s 2s ease-in-out infinite;}
+#s6.vis .s6hearts{opacity:1;transform:translateY(0);}
+
+/* ════════════════════════════════
+   SCENE 6 — Finel
 ════════════════════════════════ */
 #s5{background:radial-gradient(ellipse at center,#280042 0%,#060010 80%);padding:16px;}
 .s5card{
@@ -174,26 +195,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060010;font-family:
 .rsvp-lbl{font-style:italic;font-size:.82rem;letter-spacing:2px;color:var(--pl);margin-top:18px;}
 .rsvp-nm{font-family:'Dancing Script',cursive;font-size:clamp(1.6rem,5vw,2rem);color:var(--gd);}
 
-/* ════════════════════════════════
-   SCENE 6 — Finale
-════════════════════════════════ */
-#s6{background:radial-gradient(ellipse at center,#3a0058 0%,#08001a 80%);text-align:center;padding:20px;}
-.s6ring{font-size:clamp(1.3rem,5vw,2.2rem);letter-spacing:10px;
-  opacity:0;transform:scale(0);transition:opacity .6s .2s,transform .8s .2s cubic-bezier(.34,1.56,.64,1);}
-#s6.vis .s6ring{opacity:1;transform:scale(1);}
-.s6main{opacity:0;transform:translateY(28px);transition:opacity .8s .7s,transform .8s .7s;}
-#s6.vis .s6main{opacity:1;transform:translateY(0);}
-.s6name{
-  font-family:'Dancing Script',cursive;
-  font-size:clamp(4rem,16vw,8rem);line-height:1;
-  background:linear-gradient(135deg,#ffd700,#ff69b4,#ce93d8,#ffd700);
-  background-size:300%;animation:shim 3s linear infinite;
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  filter:drop-shadow(0 0 40px rgba(255,215,0,.4));margin:8px 0;}
-.s6msg{font-style:italic;font-size:clamp(.88rem,3vw,1.15rem);color:var(--pl);line-height:1.85;max-width:360px;margin:0 auto 16px;}
-.s6hearts{font-size:clamp(1.2rem,4vw,1.8rem);letter-spacing:8px;
-  opacity:0;transform:translateY(18px);transition:opacity .8s 1.3s,transform .8s 1.3s;animation:fl 2s 2s ease-in-out infinite;}
-#s6.vis .s6hearts{opacity:1;transform:translateY(0);}
+
 
 /* ── SHARED ANIMS ── */
 @keyframes shim{0%{background-position:-200% center}100%{background-position:200% center}}
